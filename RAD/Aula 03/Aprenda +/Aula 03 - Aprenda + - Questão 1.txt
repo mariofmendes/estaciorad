@@ -1,0 +1,12 @@
+Atividade Autônoma Aura:
+Questão 1) Existem dois modos de se trabalhar com arquivos, onde um é adequado para trabalhar
+com arquivos que contêm imagem, som e vídeo, dentre outros, o segundo modo pode ser aberto
+em qualquer editor básico e ser editado, esses modos são:
+a) Sequencial e Texto
+b) Binário e Texto
+c) Multimidia e Binário
+d) Texto e Stream
+e) Multimidia e Stream
+
+Resposta:
+c) Multimidia e Binário

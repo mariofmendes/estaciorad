@@ -1,0 +1,15 @@
+Atividade Autônoma Aura: Questão 1) A metodologia de desenvolvimento rápido de software (RAD)
+tem como objetivo acelerar o processo de entrega de software através de um processo que prioriza o
+desenvolvimento no curto prazo com entregas que incorporam conceitos bem debatidos com as
+partes envolvidas. Portanto a RAD possui diversas vantagens, em especial, em relação aos métodos
+tradicionais de desenvolvimento. Nesse sentido, selecione a opção que NÃO é uma vantagem da
+metodologia RAD:
+Atividade verificadora de aprendizagem
+a) Integração antecipada do sistema e redução de riscos.
+b) Adaptabilidade e compartimentação dos componentes do sistema.
+c) Versões iterativas e menor tempo de colocação no mercado.
+d) Feedback constante do usuário.
+e) Ter como pré-requisito equipes tecnicamente muito qualificadas.
+
+Resposta:
+e) Ter como pré-requisito equipes tecnicamente muito qualificadas.
