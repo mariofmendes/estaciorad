@@ -48,7 +48,7 @@ def deletar_usuario():
     conexao = conector.connect('exemplo.db')
     cursor = conexao.cursor()
     sql = "DELETE FROM usuarios WHERE id = ?"
-    cursor.execute(sql)
+    cursor.execute(sql, (id,))
 
     conexao.commit()
     conexao.close()
