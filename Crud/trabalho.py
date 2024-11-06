@@ -4,17 +4,37 @@ from tkinter import messagebox
 
 # Funções de Banco de Dados
 def criar_tabela():
-    conexao = conector.connect('exemplo.db')
-    cursor = conexao.cursor()
-    sql = ("CREATE TABLE IF NOT EXISTS usuarios (id INTEGER PRIMARY KEY, "
-           "nome TEXT NOT NULL, idade INTEGER, dn DATE, endereco VARCHAR, "
-           "tel CHAR, sexo TEXT, profissao TEXT, objetivo TEXT, dias_semana TEXT, "
-           "horario TEXT, qntd_dia VARCHAR, historico TEXT, fuma TEXT, alcool TEXT, "
-           "medicamentos TEXT, anabolizantes TEXT, suplementos TEXT, limitacao TEXT, "
-           "atividade_fisica TEXT, sono TEXT, alimenta TEXT, rotina TEXT)")
-    cursor.execute(sql)
-    conexao.commit()
-    conexao.close()
+    try:
+
+        conexao = conector.connect('exemplo.db')
+        cursor = conexao.cursor()
+
+
+        sql = ("CREATE TABLE IF NOT EXISTS usuarios (id INTEGER PRIMARY KEY, "
+               "nome TEXT NOT NULL, idade INTEGER, dn DATE, endereco VARCHAR, "
+               "tel CHAR, sexo TEXT, profissao TEXT, objetivo TEXT, dias_semana TEXT, "
+               "horario TEXT, qntd_dia VARCHAR, historico TEXT, fuma TEXT, alcool TEXT, "
+               "medicamentos TEXT, anabolizantes TEXT, suplementos TEXT, limitacao TEXT, "
+               "atividade_fisica TEXT, sono TEXT, alimenta TEXT, rotina TEXT)")
+        cursor.execute(sql)
+
+
+        conexao.commit()
+        print("Tabela criada com sucesso.")
+
+    except conector.Error as e:
+        # Tratamento de erro para problemas de conexão e execução
+        messagebox.showerror("Erro", f"Ocorreu um erro ao criar a tabela: {e}")
+
+    finally:
+        
+        if conexao:
+            conexao.close()
+            print("Conexão encerrada.")
+
+
+# Teste rápido da função
+criar_tabela()
 
 def adicionar_usuario(dados):
     conexao = conector.connect('exemplo.db')
